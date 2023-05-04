@@ -1,17 +1,17 @@
-def mostraLinha(nucleo_losango: int, linha: int):
+def mostra_linha(nucleo_interno: int, linha_interno: int):
     print("")
-    print(end=" " * (nucleo_losango - linha))
-    contador = 1
-    while contador < (2 * linha):
-        print(end="{}".format(contador))
-        contador += 1
+    print(end=" " * (nucleo_interno - linha_interno))
+    contador_interno = 1
+    while contador_interno < (2 * linha_interno):
+        print(end="{}".format(contador_interno))
+        contador_interno += 1
 
 
-nucleo = int(input("Informe o número que determinará as dimensões do losango (Inteiro, maior que 1): "))
-contador_externo = 1
-while contador_externo < nucleo:
-    mostraLinha(nucleo, contador_externo)
-    contador_externo += 1
-while contador_externo > 0:
-    mostraLinha(nucleo, contador_externo)
-    contador_externo -= 1
+nucleo_externo = int(input("Informe o número que determinará as dimensões do losango (Inteiro, maior que 1): "))
+linha_externo = 1  # contador
+while linha_externo < nucleo_externo:
+    mostra_linha(nucleo_externo, linha_externo)
+    linha_externo += 1
+while linha_externo > 0:
+    mostra_linha(nucleo_externo, linha_externo)
+    linha_externo -= 1
